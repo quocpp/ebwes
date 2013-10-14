@@ -1,10 +1,10 @@
 <?php
-class control
+class Control
 {
     private $model_in;
-    public function __construct	(model $model)
+    public function __construct	(Model $model)
     {
-        $model_in = $model;
+        $this->model_in = $model;
     }
     
     public function load_catalog()
@@ -12,7 +12,7 @@ class control
         $querry = "SELECT * FROM catalog";
         try
         {
-            $result = $model_in->load_table($querry);
+            $result = $this->model_in->load_table($querry);
             
         }
         catch (Exception $ex) {

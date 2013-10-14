@@ -1,21 +1,38 @@
 <?
-class view
+class View
 {  
     private $control_in;
-    public function __construct(control $control)
+    public function __construct(Control $control)
     {
-        $this ->$control_in = $control;
+        $this->control_in = $control;
     }
     
     public function outcatalog()
     {
         try {
- //       $control_in = new control();
-            $result1 = $control_in -> load_catalog();
+            $result1 = $this->control_in->load_catalog();
+?>          
+
+
+<?
             while ($row = mysqli_fetch_array($result1)) 
             {
-	     echo $row['name'];
-	     echo "<br>";
+?>
+	    <ul class="menu1">
+	      <li>Home</li>
+	      <li>Products</li>
+	      <li class="parent">Gallery
+		<ul>
+		  <li>Summer 2012</li>
+		  <li>Everyday</li>
+		  <li>Love</li>
+		</ul>
+	      </li>
+	    </ul>
+	    
+<?
+	     #echo $row['name'];
+	     #echo "<br>";
             }
         }
         catch (Exception $ex) {

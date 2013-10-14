@@ -125,7 +125,7 @@
 
     <?php if ($main_menu): ?>
       <div id="main-menu" class="navigation">
-        <?php print theme('links__system_main_menu', array(
+ <!--       <?php print theme('links__system_main_menu', array(
           'links' => $main_menu,
           'attributes' => array(
             'id' => 'main-menu-links',
@@ -137,6 +137,7 @@
             'class' => array('element-invisible'),
           ),
         )); ?>
+-->
       </div> <!-- /#main-menu -->
     <?php endif; ?>
 

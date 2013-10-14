@@ -4,6 +4,6 @@
   public $address = "localhost";
   public $user = "root";
   public $password = "";
-  public $db_name = "catalog";
+  public $db_name = "book";
  }
 ?>
