@@ -18,17 +18,17 @@ class View
             while ($row = mysqli_fetch_array($result1)) 
             {
 ?>
-	    <ul class="menu1">
-	      <li>Home</li>
-	      <li>Products</li>
-	      <li class="parent">Gallery
-		<ul>
-		  <li>Summer 2012</li>
-		  <li>Everyday</li>
-		  <li>Love</li>
-		</ul>
-	      </li>
-	    </ul>
+<div id='cssmenu'>
+<ul>
+   <li><a href='#'><span>Home</span></a></li>
+   <li class='has-sub last'><a href='#'><span>Products</span></a>
+      <ul>
+         <li><a href='#'><span>Menus</span></a></li>
+         <li class='last'><a href='#'><span>Products</span></a></li>
+      </ul>
+   </li>
+</ul>
+</div>
 	    
 <?
 	     #echo $row['name'];
