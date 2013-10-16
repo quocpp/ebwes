@@ -1,9 +1,0 @@
-<?php
- class db
- {
-  public $address = "localhost";
-  public $user = "root";
-  public $password = "";
-  public $db_name = "book";
- }
-?>
