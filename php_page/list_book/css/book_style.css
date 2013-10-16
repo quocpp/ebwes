@@ -1,0 +1,16 @@
+#book_img_l{
+  width: 71px;
+  height: 107px;
+}
+#book_image{
+  width: 71px;
+  height: 107px;
+  float: left;
+}
+#book_info{
+  height: 107px;
+  margin-left: 80px;
+}
+#book_name{
+  font-weight:bold
+}
