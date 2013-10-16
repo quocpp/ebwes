@@ -1,5 +1,5 @@
 <?php
-class Model
+class Load_cat_model
 {     
     public function load_table($querry)
     {

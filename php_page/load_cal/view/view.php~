@@ -1,8 +1,8 @@
 <?
-class View
+class Load_cat_view
 {  
     private $control_in;
-    public function __construct(Control $control)
+    public function __construct(Load_cat_control $control)
     {
         $this->control_in = $control;
     }
@@ -26,7 +26,7 @@ class View
 		  while ((count($cat_resut) > 0) && ($cat_row = $cat_resut->fetchAssoc()))
 		  {
 		?>
-		  <li><a href='#'><span><? echo $cat_row['name'] ?></span></a></li>
+		  <li><a href='<? echo "list_book?cat=".$cat_row['no']; ?>'><span><? echo $cat_row['name'] ?></span></a></li>
 		<?
 		  }
 		?>

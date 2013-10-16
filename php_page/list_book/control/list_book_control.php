@@ -11,15 +11,15 @@ class List_book_control
         $this->major_type_in = $major_type;
     }
         
-    public function load_catalog_list()
+    public function load_book_list()
     {
-	if ($major_type_in == 0)
+	if ($this->major_type_in == 0)
 	{
-	  $querry = "SELECT * FROM book_list WHERE cat_type=".$cat_type_in;
+	  $querry = "SELECT * FROM book_list WHERE cat_type=".$this->cat_type_in;
 	}
 	else
 	{
-	  $querry = "SELECT * FROM book_list WHERE cat_type=".$cat_type_in." and major_type=".$major_type_in;
+	  $querry = "SELECT * FROM book_list WHERE cat_type=".$this->cat_type_in." and major_type=".$this->major_type_in;
 	}
         try
         {
