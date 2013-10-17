@@ -12,20 +12,34 @@
       try
       {
 	$result = $this->control_in->load_book_list();
+	$result1= $this->control_in->load_maj();
       }
       catch (Exception $ex)
       {
 	echo $ex->getMessage();
       }
 ?>
-      <form action="" method="post">
-	<select name="cars">
-	  <option value="volvo">all</option>
-	  <option value="saab">Saab</option>
-	  <option value="fiat">Fiat</option>
-	  <option value="audi">Audi</option>
+      <form id="choose_maj" action="" method="get">
+	<select id="cmb_maj_type" name="maj" <?if(!isset($_GET['maj'])|| $_GET['maj'] =="0")
+						echo "selected";?>>
+	  <option value="0"> All </option>
+	  <?
+	    while ((count($result1)>0) && $row1 = $result1->fetchAssoc()) 
+	    {
+	  ?>
+	      <option 
+		<? 
+		  if(isset($_GET['maj'])|| $_GET['maj'] !="0") 
+		    if ($_GET['maj'] == $row1['no'])
+		     echo "selected";
+		?> 
+	      value="<? echo $row1['no']; ?>"><? echo $row1['name']; ?></option>
+	  <?
+	    }
+	  ?>
 	</select>
-	<input type="submit">
+	<input value="Choose" id="search_maj" type="submit">
+	<input type="hidden" name="cat" value="<? echo $_GET['cat'] ?>">
       </form>
 <?
       while ((count($result)>0) && $row = $result->fetchAssoc()) 
@@ -38,8 +52,8 @@
           </div>
           <div id="book_info">
             <div id="book_name"> 
-	      <a href="<? echo $row['link']; ?>">
-		<h2> <? echo $row['name'];?> </h2>
+	      <a id="book_name_link"  href="<? echo $row['link']; ?>">
+		 <? echo $row['name'];?>
 	      </a>
             </div>
 	    <div id="book_des"> <? echo $row['des'] ?> </div>

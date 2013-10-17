@@ -11,6 +11,29 @@
   height: 107px;
   margin-left: 80px;
 }
+
 #book_name{
-  font-weight:bold
+  font-weight:bold;
+}
+
+#book_field{
+  padding-top:20px;
+}
+#book_name_link{
+  font-size:20px;
+}
+
+#choose_maj{
+  font-size: 18px;
+}
+
+#cmb_maj_type{
+  height: 33px;
+  width: auto;
+  min-width: 61px;
+}
+
+#search_maj{
+  height: 33px;
+  width: auto;
 }

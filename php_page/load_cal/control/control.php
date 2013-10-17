@@ -2,7 +2,7 @@
 class Load_cat_control
 {
     private $model_in;
-    public function __construct	(Load_cat_model $model)
+    public function __construct	(Sql_model $model)
     {
         $this->model_in = $model;
     }
